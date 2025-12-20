@@ -17,11 +17,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "MaKa37 DE Labs"
+title                    : "MaKa37 Data Engineering Labs"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "MaKa37"
-description              : "An amazing website."
+description              : "Maka37 Data Engineering Labs"
 url                      : "https://maka37.github.io" # the base hostname & protocol for your site e.g. 
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -34,9 +34,9 @@ enable_copy_code_button  : # true, false (default)
 copyright                : # "copyright" name, defaults to site.title
 copyright_url            : # "copyright" URL, defaults to site.url
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : "YOUR_DISQUS_SHORTNAME" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -116,7 +116,7 @@ author:
   name             : "MaKa37"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "**Learning All Day.**"
-  location         : "Korea"
+  location         : "South Korea"
   email            :
   links:
     - label: "Email"
@@ -319,7 +319,7 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: wide #single
       author_profile: true
       read_time: true
       comments: # true
