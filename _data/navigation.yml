@@ -8,8 +8,8 @@ main:
     url: /categories/
   # - title: "Tags"
   #   url: /tags/
-  # - title: "Pages"
-  #   url: /pages/
+  - title: "Pages"
+    url: /pages/
   # - title: "Collections"
   #   url: /collection-archive/
   # - title: "External Link"
