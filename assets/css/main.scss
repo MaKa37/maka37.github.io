@@ -15,12 +15,12 @@ div[class^="language-"], div[class*=" language-"] {
 
   &::before {
     position: absolute;
-    top: 5px;      /* 상단 여백 (취향에 따라 조절) */
-    right: 12px;   /* 우측 여백 (취향에 따라 조절) */
+    top: 6px;      /* 상단 여백 (취향에 따라 조절) */
+    left: 12px;   /* 우측 여백 (취향에 따라 조절) Left or Right */
     font-family: $sans-serif;
     font-size: 0.75em;
     font-weight: bold;
-    color: rgba(#fff, 0.4); /* 글자 색상 및 투명도 */
+    color: rgba(#fff, 0.7); /* 글자 색상 및 투명도 */
     text-transform: uppercase;
     z-index: 5;
     pointer-events: none; /* 텍스트 선택 방해 금지 */
