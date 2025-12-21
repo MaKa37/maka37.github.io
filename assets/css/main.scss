@@ -44,37 +44,40 @@ div[class^="language-"], div[class*=" language-"] {
 .language-markdown::before { content: "Markdown"; }
 .language-diff::before { content: "Diff"; }
 
-/* wide 클래스가 적용된 포스트에서 TOC 보이게 하기 */
-.layout--single.wide {
-  /* 1. 전체 본문 영역 너비 제한 해제 및 여백 조정 */
+/* 1. 프로필이 사라진 좌측 빈 공간을 본문이 채우도록 설정 */
+.layout--single:not(.wide) {
+  /* 본문 영역 컨테이너 너비 확장 */
   .page {
     @media (min-width: 64em) {
-      max-width: 1280px; /* 원하는 전체 너비 */
+      width: 100%; 
       padding-right: 0;
     }
   }
 
-  /* 2. 본문 너비를 조절하여 TOC 공간 확보 */
+  /* 실제 본문(글) 영역을 왼쪽으로 확장 */
   .page__content {
     @media (min-width: 64em) {
-      width: calc(100% - 250px) !important; /* 250px는 TOC의 너비 */
+      /* 우측 TOC 공간(약 250~300px)을 제외한 전체를 사용 */
+      width: calc(100% - 300px) !important; 
+      max-width: 100%;
       float: left;
-      padding-right: 50px;
+      padding-right: 40px; /* TOC와의 간격 */
     }
   }
 
-  /* 3. 숨겨진 사이드바(TOC) 다시 살리기 */
+  /* 2. 우측 TOC 위치 및 너비 최적화 */
   .page__sidebar {
     @media (min-width: 64em) {
-      display: block !important;
-      width: 250px !important;
+      width: 300px !important;
       float: right;
-      margin: 0;
+      margin-right: 0;
     }
   }
+}
 
-  /* 4. 저자 프로필은 여전히 숨기기 */
-  .author__profile {
-    display: none !important;
-  }
+/* 3. (선택사항) 전체 페이지의 최대 너비 자체를 키우고 싶을 때 */
+#main {
+  max-width: 1280px; /* 기본값보다 크게 설정 (예: 1280px 또는 90%) */
+  margin-left: auto;
+  margin-right: auto;
 }
