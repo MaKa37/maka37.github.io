@@ -44,40 +44,45 @@ div[class^="language-"], div[class*=" language-"] {
 .language-markdown::before { content: "Markdown"; }
 .language-diff::before { content: "Diff"; }
 
-/* 1. 프로필이 사라진 좌측 빈 공간을 본문이 채우도록 설정 */
-.layout--single:not(.wide) {
-  /* 본문 영역 컨테이너 너비 확장 */
+/* 기본 single 레이아웃에서 좌측 공백 제거 및 TOC 유지 */
+.layout--single {
+  /* 1. 좌측 사이드바(프로필) 영역 완전히 숨기기 */
+  .sidebar {
+    display: none !important;
+  }
+
+  /* 2. 전체 페이지 컨테이너의 좌측 여백 제거 */
   .page {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    
     @media (min-width: 64em) {
-      width: 100%; 
-      padding-right: 0;
+      max-width: 100% !important; /* 전체 너비를 활용하도록 설정 */
     }
   }
 
-  /* 실제 본문(글) 영역을 왼쪽으로 확장 */
+  /* 3. 본문 내용을 좌측 끝으로 밀착시키고 너비 확장 */
   .page__content {
     @media (min-width: 64em) {
-      /* 우측 TOC 공간(약 250~300px)을 제외한 전체를 사용 */
-      width: calc(100% - 300px) !important; 
-      max-width: 100%;
-      float: left;
-      padding-right: 40px; /* TOC와의 간격 */
+      float: left !important;
+      width: calc(100% - 250px) !important; /* TOC 너비를 제외한 나머지 */
+      padding-right: 50px !important; /* 본문과 TOC 사이 간격 */
     }
   }
 
-  /* 2. 우측 TOC 위치 및 너비 최적화 */
+  /* 4. 우측 TOC 사이드바 위치 고정 */
   .page__sidebar {
     @media (min-width: 64em) {
-      width: 300px !important;
-      float: right;
-      margin-right: 0;
+      display: block !important;
+      float: right !important;
+      width: 250px !important;
+      margin-left: 0 !important;
     }
   }
 }
 
-/* 3. (선택사항) 전체 페이지의 최대 너비 자체를 키우고 싶을 때 */
+/* 전체 틀의 너비가 너무 좁다면 여기서 조절 가능 */
 #main {
-  max-width: 1280px; /* 기본값보다 크게 설정 (예: 1280px 또는 90%) */
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1200px; /* 원하는 최대 너비값 (예: 1280px) */
+  margin: 0 auto;
 }
