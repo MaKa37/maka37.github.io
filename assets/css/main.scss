@@ -15,7 +15,7 @@ div[class^="language-"], div[class*=" language-"] {
 
   &::before {
     position: absolute;
-    top: 6px;      /* 상단 여백 (취향에 따라 조절) */
+    top: 12px;      /* 상단 여백 (취향에 따라 조절) */
     left: 12px;   /* 우측 여백 (취향에 따라 조절) Left or Right */
     font-family: $sans-serif;
     font-size: 0.75em;
