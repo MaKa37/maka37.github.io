@@ -10,7 +10,9 @@ toc_label: "Contents"
 toc_sticky: True
 ---
 
-# Post: BlogTips
+# Post Front matter Sample
+
+## BlogTips
 
 ```yaml
 title: "Github Blog Tips: Front Matter Sample"
@@ -24,7 +26,7 @@ toc_label: "Contents"
 toc_sticky: True
 ```
 
-# Post: Data Engineer Learning
+## Data Engineer Learning
 
 ```yaml
 title: "DEL: Contents Title"
