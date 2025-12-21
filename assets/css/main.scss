@@ -7,3 +7,34 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* Code Block */
+/* 코드 블록 우측 상단 언어 표시 설정 */
+div[class^="language-"], div[class*=" language-"] {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 5px;      /* 상단 여백 (취향에 따라 조절) */
+    right: 12px;   /* 우측 여백 (취향에 따라 조절) */
+    font-family: $sans-serif;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: rgba(#fff, 0.4); /* 글자 색상 및 투명도 */
+    text-transform: uppercase;
+    z-index: 5;
+    pointer-events: none; /* 텍스트 선택 방해 금지 */
+  }
+}
+
+/* 언어별 라벨 텍스트 지정 */
+.language-yaml::before, .language-yml::before { content: "YAML"; }
+.language-python::before { content: "Python"; }
+.language-javascript::before, .language-js::before { content: "JavaScript"; }
+.language-typescript::before, .language-ts::before { content: "TypeScript"; }
+.language-bash::before { content: "Bash"; }
+.language-json::before { content: "JSON"; }
+.language-html::before { content: "HTML"; }
+.language-css::before { content: "CSS"; }
+.language-markdown::before { content: "Markdown"; }
+.language-diff::before { content: "Diff"; }
