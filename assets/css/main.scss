@@ -43,3 +43,38 @@ div[class^="language-"], div[class*=" language-"] {
 .language-css::before { content: "CSS"; }
 .language-markdown::before { content: "Markdown"; }
 .language-diff::before { content: "Diff"; }
+
+/* wide 클래스가 적용된 포스트에서 TOC 보이게 하기 */
+.layout--single.wide {
+  /* 1. 전체 본문 영역 너비 제한 해제 및 여백 조정 */
+  .page {
+    @media (min-width: 64em) {
+      max-width: 1280px; /* 원하는 전체 너비 */
+      padding-right: 0;
+    }
+  }
+
+  /* 2. 본문 너비를 조절하여 TOC 공간 확보 */
+  .page__content {
+    @media (min-width: 64em) {
+      width: calc(100% - 250px) !important; /* 250px는 TOC의 너비 */
+      float: left;
+      padding-right: 50px;
+    }
+  }
+
+  /* 3. 숨겨진 사이드바(TOC) 다시 살리기 */
+  .page__sidebar {
+    @media (min-width: 64em) {
+      display: block !important;
+      width: 250px !important;
+      float: right;
+      margin: 0;
+    }
+  }
+
+  /* 4. 저자 프로필은 여전히 숨기기 */
+  .author__profile {
+    display: none !important;
+  }
+}
