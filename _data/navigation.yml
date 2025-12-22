@@ -17,3 +17,19 @@ main:
   #   target: _blank
   - title: "Quick-Start Guide"
     url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+
+Submain:
+  - title: "BlogTips"
+    url: /categories/BlogTips
+  - title: "Data Engineering"
+    children:
+    - title: "Sample1"
+      url: /
+    - title: "Sample2"
+      url: /
+    - title: "Sample3"
+      url: /
+    - title: "Sample4"
+      url: /
+    - title: "Sample5"
+      url: /

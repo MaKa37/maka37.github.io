@@ -3,7 +3,7 @@ title: "Github Blog Tips: Front Matter Sample"
 description: "깃허브 블로그 메타데이터 샘플 서식"
 layout: single
 categories: [BlogTips, Jekyll, FrontMatter]
-author_profile: false
+author_profile: true
 
 toc: true
 toc_icon: "heart"
@@ -20,7 +20,7 @@ title: "Github Blog Tips: Front Matter Sample"
 description: "깃허브 블로그 메타데이터 샘플 서식"
 layout: single
 categories: [BlogTips, Jekyll]
-author_profile: false
+author_profile: true
 
 toc: true
 toc_icon: "heart"
@@ -35,7 +35,7 @@ title: "DEL: Contents Title"
 description: "데이터 엔지니어 학습 포스트"
 layout: single
 categories: [DataEngineer, Learning]
-author_profile: false
+author_profile: true
 
 toc: true
 toc_icon: "heart"
