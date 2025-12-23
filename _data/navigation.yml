@@ -2,8 +2,8 @@
 main:
   - title: "HOME"
     url: /
-  - title: "Posts"
-    url: /posts/
+  # - title: "Posts"
+  #   url: /posts/
   - title: "Categories"
     url: /categories/
   # - title: "Tags"
@@ -20,7 +20,7 @@ main:
 
 Submain:
   - title: "BlogTips"
-    url: /categories/BlogTips
+    url: /categories/#blogtips
   - title: "Data Engineering"
     children:
     - title: "Sample1"
